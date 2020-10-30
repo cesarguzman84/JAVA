@@ -1,0 +1,56 @@
+package cesar.guzman.poo;
+
+public class UsoEmpleados {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Empleados  empleado1=new Empleados("Ana");
+		
+		System.out.println(empleado1.getDatosEmpleado());
+		
+		//empleado1.setSeccion("RRHH");
+		
+		System.out.println(empleado1.getDatosEmpleado());
+		
+
+	}
+	
+	
+}
+
+class Empleados {
+	
+	
+	public Empleados(String nombre) {
+		
+		this.nombre=nombre;
+		
+		Id=IdSiguiente;
+		
+		IdSiguiente++;
+		
+		
+		
+	}
+	
+	public static String getIdSiguiente() {
+		
+		return "El Id de los empleados sera: " + IdSiguiente;
+		
+	}
+	
+		
+	public String getDatosEmpleado( ) {
+		
+		return "El empleado " + nombre + " tiene el Id " + Id;
+	}
+	
+	private final String nombre;
+	
+	private int Id;
+	
+	private static int IdSiguiente=1;
+	
+	
+}
